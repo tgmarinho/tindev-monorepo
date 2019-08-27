@@ -1,0 +1,30 @@
+{
+  "name": "mobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "compile": "tsc -b",
+    "prestart": "npm run compile",
+    "start": "concurrently \"npm run compile -- -w\" \"npm run _start\"",
+    "_start": "node ../../node_modules/react-native/local-cli/cli.js start --projectRoot=../../",
+    "test": "jest"
+  },
+  "dependencies": {
+    "components": "*",
+    "react": "16.8.4",
+    "react-native": "0.59.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/runtime": "^7.3.4",
+    "babel-jest": "^24.5.0",
+    "concurrently": "*",
+    "jest": "^24.5.0",
+    "metro-react-native-babel-preset": "^0.53.0",
+    "react-test-renderer": "16.8.3",
+    "typescript": "*"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

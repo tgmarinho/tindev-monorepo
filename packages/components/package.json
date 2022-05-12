@@ -7,7 +7,7 @@
     "compile": "tsc -b"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.6.1",
+    "@react-native-community/async-storage": "1.12.1",
     "@types/react-navigation": "^3.0.8",
     "socket.io-client": "^2.2.0"
   },
